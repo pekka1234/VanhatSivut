@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="div"></div>
+<div class="div2" id="ground1"></div>
+<div class="div3" id="ground2"></div>
+<div class="div4" id="este1"></div>
+<style>
+	html, body {     overflow: hidden; }
+	#div{
+
+		width:50px;
+		height:100px;
+		background-color:black;
+		position:absolute;
+		left:600px;
+		top:500px;
+	}
+	.div2{
+
+		width:1550px;
+		height:200px;
+		background-color: #803d0a;
+		position:absolute;
+		left:0px;
+		top:600px;
+	}
+		.div3{
+
+		width:1550px;
+		height:30px;
+		background-color: #1ab03d;
+		position:absolute;
+		left:0px;
+		top:600px;
+	}
+.div4{
+	width:150px;
+		height:200px;
+		background-color:#803d0a;
+		position:absolute;
+		left:900px;
+		top:400px;
+	}
+}
+</style>
+
+
+
+<script type="text/javascript">
+	var ovs = 5;
+var vase = 0;
+var vaseeste1 = 900;
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+    	if(saako == true){
+       hyppy();}
+    }
+    if(e.keyCode == 68){
+    	ovs = 2;
+    	oik();
+    }
+    if(e.keyCode == 65){
+    	ovs = 1;
+    	vas();
+    }
+     if(e.keyCode == 83){
+    	ovs = 12;
+  
+    }
+}
+
+
+	var painovoima = 0.1;
+	var hyppyvoima = 400;
+	var saako = true;
+	var maax = 501;
+function hyppy(){
+
+
+	var getac = document.getElementById("div").style.position = "absolute";
+	var painovoima = 0.1;
+	var hyppyvoima = 400;
+	hyp();
+	saako = false;
+	console.log("saa");
+
+
+
+function hyp(){
+setTimeout(function(){hyp();}, 10);
+
+	if(hyppyvoima < maax){
+			
+		var getac1 = document.getElementById("div").style.top = hyppyvoima + "px";
+		hyppyvoima = hyppyvoima - 4;
+		hyppyvoima = hyppyvoima + painovoima;
+	//	console.log(hyppyvoima);
+		painovoima = painovoima + 0.04;
+	}else{
+
+}
+
+}
+}
+function oik(){
+	fghj();
+	function fghj(){
+		
+
+
+	if(ovs == 2){
+		vase = vase - 1;
+vaseeste1 = vaseeste1 - 1;
+		document.getElementById("ground1").style.left = vase + "px";
+		document.getElementById("ground2").style.left = vase + "px";
+		document.getElementById("este1").style.left = vaseeste1 + "px";
+	setTimeout(function(){fghj();}, 5);
+}
+}
+}
+function vas(){
+	duij();
+	function duij(){
+		
+
+	
+	if(ovs == 1){
+		vase = vase + 1;
+	vaseeste1 = vaseeste1 + 1;
+	 document.getElementById("ground1").style.left = vase + "px";
+	 document.getElementById("ground2").style.left = vase + "px";
+	 document.getElementById("este1").style.left = vaseeste1 + "px";
+	setTimeout(function(){duij();}, 5);
+
+	 }
+
+}
+}
+
+maaxitesti();
+function maaxitesti(){
+if(vaseeste1 < 647 ){
+if(vaseeste1 > 449){
+maax = 300;
+}
+}
+if(vaseeste1 > 647){
+	maax = 501;
+}
+if(vaseeste1 < 449){
+	maax = 501;
+}
+xdf = hyppyvoima;
+
+//console.log(maax);
+//console.log(vaseeste1);
+var hyg = document.getElementById("div").style.top;
+//console.log(hyg)
+	//console.log(document.getElementById("este1").style.left);
+setTimeout(function(){maaxitesti();}, 40);
+}
+var xdf = null;
+var fjj = null;
+as();
+function as(){
+
+setTimeout(function(){
+	if(fjj == xdf){
+		saako = true;
+		
+	}else{
+		saako = false;
+	}
+	as();
+}, 100);
+}
+fr();
+function fr(){
+	fjj = xdf;
+	setTimeout(function(){fr();}, 40);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	makebacteria(400,200);
+	function makebacteria(x,y){
+	  var xx = x, yy = y;	
+      var s = Math.floor(Math.random()* 100);
+      x += s;
+      y += s;
+      var bac = document.createElement("IMG"), bw = 40, bh = 80;
+      bac.src = "bakteerikuva.png";
+      bac.style.width = "40px";
+      bac.style.height = "80px";
+      bac.style.position = "absolute";
+      bac.style.top = y + "px";
+      bac.style.left = x + "px";
+      document.body.appendChild(bac);
+      smoothsize();
+      function smoothsize(){
+      	x -= 0.5;
+      	y -= 0.5;
+      	bw += 1;
+      	bh += 1;
+        bac.style.width = bw + "px";
+        bac.style.height = bh + "px";
+        bac.style.position = "static";
+        bac.style.top = y + "px";
+        bac.style.left = x + "px";        
+        if(bh < 200){
+        	setTimeout(function(){smoothsize();}, 10);
+        }else{
+        	bh -= 80;
+        	bw -= 80;
+        	bac.style.width = bw + "px";
+            bac.style.height = bh + "px";
+            makebacteria(xx,yy);
+            x += 40;
+            y += 40;
+            smoothsize();
+        }
+     } 
+      
+
+	}
+
+
+</script>
+</body>
+</html>

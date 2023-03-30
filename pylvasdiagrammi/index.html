@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Tervetuloa pylväsdiagrammipiirtäjään</h1>
+<h2>Lisää ensin asiat mitkä haluat pylväsdiagrammiin:</h2>
+<h2>Pylvään nimi:</h2>
+<input type="text" name="niminimi" id="nimi">
+<h2>Asioiden määrä(numeroissa):</h2>
+<input type="text" name="asiod" id="asiat">
+<h2>Pylvään väri: (ei saa olla musta)</h2>
+<input type="color" name="vqri" id="vari" value="#2fd468">
+<button id="n" onclick="piil();">Piilota tekstit</button>
+
+<div id="d" class="di"></div>
+<button id="taln" onclick="next(document.getElementById('nimi').value, document.getElementById('asiat').value, document.getElementById('vari').value);">Tallenna pylväs</button>
+
+<button id="ed" onclick="teha();">Tee diarammi</button>
+<script type="text/javascript">
+	document.getElementById("n").style.display = "none";
+var asiat = [];
+var korkein = [];
+var maarahommeli = [];
+var ihommeli = [];
+	function next(nimi,maara,vari){
+			var teeuu = document.createElement("DIV");
+			teeuu.style.backgroundColor = vari;
+			teeuu.innerHTML = nimi +": "+maara;
+			//var a = 500 / document.getElementById("asiara").value; var b = maara * a; var c = b / 2; console.log(a,b,c);
+			//teeuu.style.width = b + "px";
+			//teeuu.style.height = "50px";
+			teeuu.style.fontSize = "30px"
+			asiat.push(teeuu);
+			korkein.push(maara);
+			ihommeli.push(nimi +": "+maara);
+			document.getElementById("nimi").value = null;
+			document.getElementById("asiat").value = null;
+			document.getElementById("vari").value = null;
+	}
+	function teha(){
+		document.getElementById("n").style.display = "block";
+		for(var i = 0; i < asiat.length; i++){
+			var max_of_array = Math.max.apply(Math, korkein);
+			console.log(max_of_array);
+			var a = 500 / max_of_array; var b = korkein[i] * a;
+			asiat[i].style.width = b + "px";
+			console.log(a,b);
+
+			var xp = 550 / asiat.length;
+			console.log(asiat.length);
+			console.log(xp);
+			asiat[i].style.height = xp + "px";
+			document.getElementById("d").appendChild(asiat[i]);
+		}
+	}
+	function piil(){
+		document.getElementById("n").innerHTML = "Näytä tekstit";
+		document.getElementById("n").onclick = nay;
+		for(var i = 0; i < asiat.length; i++){
+			asiat[i].innerHTML = "";
+		}
+	}
+	function nay(){
+				document.getElementById("n").innerHTML = "Piilota tekstit";
+		document.getElementById("n").onclick = piil;
+		for(var i = 0; i < asiat.length; i++){
+			asiat[i].innerHTML = ihommeli[i];
+		}
+	}
+</script>
+<style type="text/css">
+	.di{
+		width:500px;
+		height: 550px;
+		background-color: #EAECEB;
+		position:absolute;
+		top:70px;
+		left:700px;
+	}
+	#taln{
+		position: absolute;
+		top:400px;
+		left:0px;
+		width: 160px;
+		height: 140px;
+		font-size: 35px;
+		background-color: green;
+
+	}
+	#ed{
+				position: absolute;
+		top:570px;
+		left: 0px;
+		width: 160px;
+		height: 140px;
+		font-size: 35px;
+		background-color: orange;
+	}
+	#n{
+		position: absolute;
+		top:630px;
+		left:700px;
+		width: 180px;
+		height: 70px;
+		background-color: yellow;
+		font-size: 30px;
+	}
+</style>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="vali();">
+	<button onclick="pu(); puu();">Paina</button>
+<script type="text/javascript">
+	var w = window.innerWidth;
+var h = window.innerHeight;
+	var x = 400;
+var y = 400;
+	var x2 = 600;
+var y2 = 400;
+var kayte = [];
+function pu(){
+
+var div = document.createElement("div");
+div.style.width = "10px";
+div.style.height = "10px";
+
+if(v == 1){div.style.background = "rgb(27, 240, 19)";}
+if(v == 2){div.style.background = "rgb(14, 128, 10)";}
+if(v == 3){div.style.background = "rgb(26, 107, 22)";}
+if(v == 4){div.style.background = "rgb(99, 232, 93)";}
+if(v == 5){div.style.background = "rgb(12, 79, 9)";}
+
+
+if(kayte.includes(x+""+y)){
+		var dfg = Math.floor(Math.random()* 5);
+
+	if(x < w - 10){
+	if(dfg == 1){
+		x = x + 9;
+	}}
+	if(y < h - 10){
+	if(dfg == 2){
+		y = y + 9;
+	}}
+	if(x > 10){
+		if(dfg == 4){
+		x = x - 9;
+	}}
+	if(y > 10){
+	if(dfg == 3){
+		y = y - 9;
+	}}
+
+setTimeout(function(){pu();}, 1);
+}else{
+div.style.position = "absolute";
+div.style.top = y + "px";
+div.style.left = x + "px";
+kayte.push(x+""+y);
+div.id = "f";
+document.body.appendChild(div);
+
+
+
+a();}
+function a(){
+	var dfg = Math.floor(Math.random()* 5);
+	if(x < w -10){
+	if(dfg == 1){
+		x = x + 9;
+	}}
+	if(y < h - 10){
+	if(dfg == 2){
+		y = y + 9;
+	}}
+	if(x > 10){
+		if(dfg == 4){
+		x = x - 9;
+	}}
+	if(y > 10){
+	if(dfg == 3){
+		y = y - 9;
+	}}
+
+setTimeout(function(){pu();}, 1);
+}
+}
+var v = null;
+function vali(){
+	v = 1;
+	setTimeout(function(){v = 2;	setTimeout(function(){v = 3;	setTimeout(function(){v = 4;setTimeout(function(){v = 5; setTimeout(function(){vali();}, 10000);}, 10000);}, 10000);}, 10000);}, 10000);
+
+
+	
+
+}
+function puu(){
+
+var div = document.createElement("div");
+div.style.width = "10px";
+div.style.height = "10px";
+
+if(v == 1){div.style.background = "rgb(27, 240, 19)";}
+if(v == 2){div.style.background = "rgb(14, 128, 10)";}
+if(v == 3){div.style.background = "rgb(26, 107, 22)";}
+if(v == 4){div.style.background = "rgb(99, 232, 93)";}
+if(v == 5){div.style.background = "rgb(12, 79, 9)";}
+
+
+if(kayte.includes(x2+""+y2)){
+		var dfg = Math.floor(Math.random()* 5);
+
+	if(x2 < w - 10){
+	if(dfg == 1){
+		x2 = x2 + 9;
+	}}
+	if(y2 < h - 10){
+	if(dfg == 2){
+		y2 = y2 + 9;
+	}}
+	if(x2 > 10){
+		if(dfg == 4){
+		x2 = x2 - 9;
+	}}
+	if(y2 > 10){
+	if(dfg == 3){
+		y2 = y2 - 9;
+	}}
+
+setTimeout(function(){puu();}, 1);
+}else{
+div.style.position = "absolute";
+div.style.top = y2 + "px";
+div.style.left = x2 + "px";
+kayte.push(x2+""+y2);
+div.id = "f";
+document.body.appendChild(div);
+
+
+
+a();}
+function a(){
+	var dfg = Math.floor(Math.random()* 5);
+	if(x2 < w -10){
+	if(dfg == 1){
+		x2 = x2 + 9;
+	}}
+	if(y2 < h - 10){
+	if(dfg == 2){
+		y2 = y2 + 9;
+	}}
+	if(x2 > 10){
+		if(dfg == 4){
+		x2 = x2 - 9;
+	}}
+	if(y2 > 10){
+	if(dfg == 3){
+		y2 = y2 - 9;
+	}}
+
+setTimeout(function(){puu();}, 1);
+}
+}
+</script>
+</body>
+</html>

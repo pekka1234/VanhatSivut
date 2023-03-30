@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Alkuluku etsivä</h1>
+<button id="d" onclick="aloita();">Aloita</button>
+<h1 id="q">Ohjeet: paina aloita nappia, Huom, älä hätiköi, sillä luvun ilmestymisessä voi kestää hetki</h1>
+<h1 id="ax"></h1>
+
+<script type="text/javascript">
+	if(localStorage.getItem("tasks") == null){
+		var aluvut = [];
+		var lukumeno = 2;
+	}else{
+		var dd1 = null;
+		var dd2 = null;
+		var dd3 = null;
+		var dd4 = null;
+		var dd5 = null;
+		var dd6 = null;
+			var aluvut = []
+			aluvut.push(localStorage.getItem('tasks'));
+			document.getElementById("ax").innerHTML = aluvut;
+			console.log(aluvut)
+			var dd = aluvut[0];
+			if(dd.charAt(dd.length - 2) == ","){
+				lukumeno = dd.charAt(dd.length - 1);
+					lukumeno = lukumeno - 1;
+				lukumeno = lukumeno + 2;
+				console.log(lukumeno);
+			}else{
+				if(dd.charAt(dd.length - 3) == ","){
+				dd1 = dd.charAt(dd.length - 2);
+				dd2 = dd.charAt(dd.length - 1);
+				lukumeno = "" + dd1 + dd2 + "";
+				lukumeno = lukumeno - 1;
+				lukumeno = lukumeno + 2;
+			
+				console.log(lukumeno);
+			}else{
+
+					if(dd.charAt(dd.length - 4) == ","){
+				dd1 = dd.charAt(dd.length - 3);
+				dd2 = dd.charAt(dd.length - 2);
+				dd3 = dd.charAt(dd.length - 1);
+				lukumeno = "" + dd1 + dd2 + dd3 + "";
+				lukumeno = lukumeno - 1;
+				lukumeno = lukumeno + 2;
+					
+				console.log(lukumeno);
+			}else{
+					if(dd.charAt(dd.length - 5) == ","){
+				dd1 = dd.charAt(dd.length - 4);
+				dd2 = dd.charAt(dd.length - 3);
+				dd3 = dd.charAt(dd.length - 2);
+					dd4 = dd.charAt(dd.length - 1);
+				lukumeno = "" + dd1 + dd2 + dd3 + dd4 + "";
+				lukumeno = lukumeno - 1;
+				lukumeno = lukumeno + 2;
+					
+				console.log(lukumeno);
+			}else{
+			if(dd.charAt(dd.length - 6) == ","){
+				dd1 = dd.charAt(dd.length - 5);
+				dd2 = dd.charAt(dd.length - 4);
+				dd3 = dd.charAt(dd.length - 3);
+				dd4 = dd.charAt(dd.length - 2);
+				dd5 = dd.charAt(dd.length - 1);
+				lukumeno = "" + dd1 + dd2 + dd3 + dd4 + dd5 + "";
+				lukumeno = lukumeno - 1;
+				lukumeno = lukumeno + 2;
+					
+				console.log(lukumeno);
+			}else{
+						if(dd.charAt(dd.length - 7) == ","){
+				dd1 = dd.charAt(dd.length - 6);
+				dd2 = dd.charAt(dd.length - 5);
+				dd3 = dd.charAt(dd.length - 4);
+				dd4 = dd.charAt(dd.length - 3);
+				dd5 = dd.charAt(dd.length - 2);
+				dd6 = dd.charAt(dd.length - 1);
+				lukumeno = "" + dd1 + dd2 + dd3 + dd4 + dd5 + dd6 + "";
+				lukumeno = lukumeno - 1;
+				lukumeno = lukumeno + 2;
+					
+				console.log(lukumeno);
+			}}}}}}
+			//console.log(dd.charAt(dd.length - 1));
+
+			//	var lukumeno = 2;
+	}
+	var oluvut = [];
+	var eluvut = [];
+
+	var lukujako = 1;
+	var onko = null;
+
+	function aloita(){
+
+		var a = lukumeno , b = lukujako;
+		//	alert(a % b);
+			if(a % b == 0){
+				//on
+					if(lukujako < lukumeno){
+				//console.log("on " + lukujako);
+				oluvut.push(lukujako);
+				lukujako = lukujako + 1;
+				setTimeout(function(){aloita();}, 1);}else{laske();}
+				
+			}else{
+				//ei
+					if(lukujako < lukumeno){
+			//	console.log("ei " + lukujako);
+				eluvut.push(lukujako);
+				lukujako = lukujako + 1;
+				setTimeout(function(){aloita();}, 1);}else{laske();}
+			}
+}
+function laske(){
+
+if(oluvut.length > 1){
+	//ei
+	oluvut = [];
+	eluvut = [];
+	lukujako = 1;
+	lukumeno = lukumeno + 1;
+	setTimeout(function(){aloita();}, 1);
+//	console.log("ei");
+}else{
+		aluvut.push(lukumeno);
+		 localStorage.setItem('tasks', aluvut);
+	oluvut = [];
+	eluvut = [];
+	lukujako = 1;
+	lukumeno = lukumeno + 1;
+document.getElementById("ax").innerHTML = aluvut;
+	setTimeout(function(){aloita();}, 1);
+//	console.log("joo");
+}
+}
+
+dc(); function dc(){window.scrollBy(100,0); setTimeout(function(){dc();}, 30);}
+</script>
+<style>
+	
+#d{
+	position:fixed;
+	top:360px;
+	left:400px;
+	width:300px;
+	height: 100px;
+	font-size:30px;
+	background-color: green;
+}
+#q{
+	position: fixed;
+	top:560px;
+}
+
+</style>
+</body>
+</html>
+

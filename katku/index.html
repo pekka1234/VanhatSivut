@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="yy();">
+	<! -- H = hertta, D = ruutu, C = risti, S = pata -->
+	<! --H,D,C,S -->
+	<button class="aaaaa" onclick="arvo(); arvov2();">Pelaa</button>
+	<div class="aaaaaq"></div>
+	<style type="text/css">
+	
+.aaaaa{
+	z-index: 0;
+	width:1000px;
+	height:1000px;
+}
+
+
+
+.aaaaaq{
+
+		width:1000px;
+	height:1000px;
+
+}
+#korttioma1{
+	position:absolute;
+	top:560px;
+	left:100px;
+	width:150px;
+	border:none;
+	height:150px;
+	background-color:transparent;
+}
+#korttioma2{
+	position:absolute;
+	top:560px;
+	left:300px;
+	width:150px;
+		border:none;
+	height:150px;
+	background-color:transparent;
+}
+#korttioma3{
+	position:absolute;
+	top:560px;
+	left:500px;
+	width:150px;
+		border:none;
+	height:150px;
+	background-color:transparent;
+}
+#korttioma4{
+	position:absolute;
+	top:560px;
+	left:700px;
+	width:150px;
+		border:none;
+	height:150px;
+		background-color:transparent;
+}
+#korttioma5{
+	position:absolute;
+	top:560px;
+	left:900px;
+	width:150px;
+		border:none;
+	height:150px;
+		background-color:transparent;
+
+}
+
+#liiku1{
+	animation-name: liikua;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	
+}
+@keyframes liikua{
+from{	position:absolute;
+	top:560px;
+	left:100px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+#pysahy1{
+	animation-name: liikuaq;
+		animation-duration: 26666699999999999966s;
+}
+@keyframes liikuaq{
+from{	position:absolute;
+	top:403px;
+	left:400px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+
+
+
+
+
+
+
+
+
+#liiku2{
+	animation-name: liikuaqqq;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	
+}
+@keyframes liikuaqqq{
+from{	position:absolute;
+	top:560px;
+	left:300px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+#pysahy12{
+	animation-name: liikuaqqqqq;
+		animation-duration: 26666699999559999966s;
+}
+@keyframes liikuaqqqqq{
+from{	position:absolute;
+	top:403px;
+	left:400px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+
+
+
+
+
+#liiku3{
+	animation-name: liikuaqqqs;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	
+}
+@keyframes liikuaqqqs{
+from{	position:absolute;
+	top:560px;
+	left:500px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+#pysahy123{
+	animation-name: liikuaqqqqqs;
+		animation-duration: 26666699999559909999966s;
+}
+@keyframes liikuaqqqqqs{
+from{	position:absolute;
+	top:403px;
+	left:400px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+
+
+
+
+
+
+
+
+#liiku4{
+	animation-name: liikuaqqqsww;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	
+}
+@keyframes liikuaqqqsww{
+from{	position:absolute;
+	top:560px;
+	left:700px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+#pysahy1234{
+	animation-name: liikuaqqqqqsww;
+		animation-duration: 26666699999559909999966s;
+}
+@keyframes liikuaqqqqqsww{
+from{	position:absolute;
+	top:403px;
+	left:400px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+
+
+#liiku5{
+	animation-name: liikuaqqqswwyy;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	
+}
+@keyframes liikuaqqqswwyy{
+from{	position:absolute;
+	top:560px;
+	left:900px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+#pysahy12345{
+	animation-name: liikuaqqqqqswwyy;
+		animation-duration: 26666699999559909999966s;
+}
+@keyframes liikuaqqqqqswwyy{
+from{	position:absolute;
+	top:403px;
+	left:400px;}
+to{	position:absolute;
+	top:403px;
+	left:400px;}
+}
+</style>
+	<img  src="2H.png">
+	<img  src="2D.png">
+	<img  src="2C.png">
+	<img  src="2S.png">
+
+	<img  src="3H.png">
+	<img  src="3D.png">
+	<img  src="3C.png">
+	<img  src="3S.png">
+
+	<img  src="4H.png">
+	<img  src="4D.png">
+	<img  src="4C.png">
+	<img  src="4S.png">
+
+	<img  src="5H.png">
+	<img  src="5D.png">
+	<img  src="5C.png">
+	<img  src="5S.png">
+
+	<img  src="6H.png">
+	<img  src="6D.png">
+	<img  src="6C.png">
+	<img  src="6S.png">
+
+	<img  src="7H.png">
+	<img  src="7D.png">
+	<img  src="7C.png">
+	<img  src="7S.png">
+
+	<img  src="8H.png">
+	<img  src="8D.png">
+	<img  src="8C.png">
+	<img  src="8S.png">
+
+	<img  src="9H.png">
+	<img  src="9D.png">
+	<img  src="9C.png">
+	<img  src="9S.png">
+
+	<img  src="10H.png">
+	<img  src="10D.png">
+	<img  src="10C.png">
+	<img  src="10S.png">
+
+	<img  src="JH.png">
+	<img  src="JD.png">
+	<img  src="JC.png">
+	<img  src="JS.png">
+
+	<img  src="KH.png">
+	<img  src="KD.png">
+	<img  src="KC.png">
+	<img  src="KS.png">
+
+	<img  src="QH.png">
+	<img  src="QD.png">
+	<img  src="QC.png">
+	<img  src="QS.png">
+
+	<img  src="AH.png">
+	<img  src="AD.png">
+	<img  src="AC.png">
+	<img  src="AS.png">
+
+
+
+	<! --H,D,C,S -->	<! --H,D,C,S -->
+	<img  src="2H.png">
+	<img  src="2D.png">
+	<img  src="2C.png">
+	<img  src="2S.png">
+
+	<img  src="3H.png">
+	<img  src="3D.png">
+	<img  src="3C.png">
+	<img  src="3S.png">
+
+	<img  src="4H.png">
+	<img  src="4D.png">
+	<img  src="4C.png">
+	<img  src="4S.png">
+
+	<img  src="5H.png">
+	<img  src="5D.png">
+	<img  src="5C.png">
+	<img  src="5S.png">
+
+	<img  src="6H.png">
+	<img  src="6D.png">
+	<img  src="6C.png">
+	<img  src="6S.png">
+
+	<img  src="7H.png">
+	<img  src="7D.png">
+	<img  src="7C.png">
+	<img  src="7S.png">
+
+	<img  src="8H.png">
+	<img  src="8D.png">
+	<img  src="8C.png">
+	<img  src="8S.png">
+
+	<img  src="9H.png">
+	<img  src="9D.png">
+	<img  src="9C.png">
+	<img  src="9S.png">
+
+	<img  src="10H.png">
+	<img  src="10D.png">
+	<img  src="10C.png">
+	<img  src="10S.png">
+
+	<img  src="JH.png">
+	<img  src="JD.png">
+	<img  src="JC.png">
+	<img  src="JS.png">
+
+	<img  src="KH.png">
+	<img  src="KD.png">
+	<img  src="KC.png">
+	<img  src="KS.png">
+
+	<img  src="QH.png">
+	<img  src="QD.png">
+	<img  src="QC.png">
+	<img  src="QS.png">
+
+	<img  src="AH.png">
+	<img  src="AD.png">
+	<img  src="AC.png">
+	<img  src="AS.png">
+
+
+<button id="korttioma1" onclick="siirtomaaa();"></button>
+<button id="korttioma2" onclick="siirtomaab();"></button>
+<button id="korttioma3" onclick="siirtomaac();"></button>
+<button id="korttioma4" onclick="siirtomaad();"></button>
+<button id="korttioma5" onclick="siirtomaae();"></button>
+<script type="text/javascript">
+	var kv1 = 878;
+	var kv2 = 1112121;
+	var kv3 = 919129299292;
+	var kv4 = 67999999999999999999;
+	var kv5 = 11;
+	document.getElementById("korttioma1").style.display = "none";
+		document.getElementById("korttioma2").style.display = "none";
+			document.getElementById("korttioma3").style.display = "none";
+				document.getElementById("korttioma4").style.display = "none";
+					document.getElementById("korttioma5").style.display = "none";
+	var v1 = 522222222222222222222222222267;
+var v2 = 34562222222222222222222789;
+var v3 = 57222222222222222222349;
+var v4 = 1122222222222222222222222211;
+var v5 = 892222222222222222222222222222222220;
+	var avara = 0;
+	awqq(); function awqq(){window.scrollTo(0, 0); if(avara < 30){setTimeout(function(){awqq();}, 20); avara = avara + 1;}}
+
+
+	function yy(){
+if(localStorage.getItem("onkokortti") == "on"){
+	arvo(); arvov2();
+	localStorage.clear("onkokortti");
+}
+	}
+	var kerraet = 0;
+	
+
+	function a(){
+document.getElementsByTagName("IMG")[kerraet].style.display = "none";
+
+kerraet = kerraet + 1;
+
+if(kerraet < 104){
+setTimeout(function(){a();},1);
+}
+}
+
+//MUISTA KUN JULKAISET TÄMÄN HEROKUUN NIIN TUO FILE:/// JUTTU EI TOIMI SIELLÄ JOTEN VAIHDA SE HEROKUN OMAAN JUTTUUN ENNEN KUIN JULKAISET TÄMÄN!!!!!!!!!!
+	var idd = "https://katku.herokuapp.com/6C.png";
+	//H,D,C,S
+	//H = hertta, D = ruutu, C = risti, S = pata
+
+
+
+/////////////////////////////////////////////////////////
+var k1 = 5757575773722;
+var k2 = 88888888888888888822222222222;
+var k3 = 326746760;
+var k4 = 4444444433434340;
+var k5 = 43243244424330;
+
+
+
+
+
+
+
+
+
+var kortti = 0;
+function arvo(){
+	setTimeout(function(){tieäv();}, 600);
+		document.getElementById("korttioma1").style.display = "block";
+		document.getElementById("korttioma2").style.display = "block";
+			document.getElementById("korttioma3").style.display = "block";
+				document.getElementById("korttioma4").style.display = "block";
+					document.getElementById("korttioma5").style.display = "block";
+	document.getElementsByTagName("BUTTON")[0].style.display = "none";
+kortti = Math.floor(Math.random()* 51 + 0);
+setTimeout(function(){qwerty();}, 30);
+function qwerty(){
+document.getElementsByTagName("IMG")[kortti].style.display = "block";
+
+document.getElementsByTagName("IMG")[kortti].style.position = "absolute";
+document.getElementsByTagName("IMG")[kortti].style.top = "560px";
+document.getElementsByTagName("IMG")[kortti].style.left = "100px";
+document.getElementsByTagName("IMG")[kortti].style.height = "150px";
+document.getElementsByTagName("IMG")[kortti].style.width = "150px";
+console.log("ykkönen  =    " + kortti);
+k1 = kortti;
+setTimeout(function(){qwerty1();}, 100);
+
+}
+////////////////
+function qwerty1(){
+kortti = Math.floor(Math.random()* 52 + 0);
+
+document.getElementsByTagName("IMG")[kortti].style.display = "block";
+document.getElementsByTagName("IMG")[kortti].style.position = "absolute";
+document.getElementsByTagName("IMG")[kortti].style.top = "560px";
+
+document.getElementsByTagName("IMG")[kortti].style.left = "300px";
+document.getElementsByTagName("IMG")[kortti].style.height = "150px";
+document.getElementsByTagName("IMG")[kortti].style.width = "150px";
+/////////////////////////////////
+k2 = kortti;
+console.log("ykkönen  =    " + kortti);
+setTimeout(function(){qwerty2();}, 100);
+}
+function qwerty2(){
+kortti = Math.floor(Math.random()* 52 + 0);
+document.getElementsByTagName("IMG")[kortti].style.display = "block";
+document.getElementsByTagName("IMG")[kortti].style.position = "absolute";
+document.getElementsByTagName("IMG")[kortti].style.top = "560px";
+
+document.getElementsByTagName("IMG")[kortti].style.left = "500px";
+document.getElementsByTagName("IMG")[kortti].style.height = "150px";
+document.getElementsByTagName("IMG")[kortti].style.width = "150px";
+/////////////////////////
+k3 = kortti;
+console.log("ykkönen  =    " + kortti);
+setTimeout(function(){qwerty3();}, 100);
+}
+function qwerty3(){
+kortti = Math.floor(Math.random()* 52 + 0);
+document.getElementsByTagName("IMG")[kortti].style.display = "block";
+document.getElementsByTagName("IMG")[kortti].style.position = "absolute";
+document.getElementsByTagName("IMG")[kortti].style.top = "560px";
+document.getElementsByTagName("IMG")[kortti].style.left = "700px";
+
+document.getElementsByTagName("IMG")[kortti].style.height = "150px";
+document.getElementsByTagName("IMG")[kortti].style.width = "150px";
+////////////////////////////////
+k4 = kortti;
+console.log("ykkönen  =    " + kortti);
+setTimeout(function(){qwerty4();}, 100);
+}
+function qwerty4(){
+kortti = Math.floor(Math.random()* 52 + 0);
+document.getElementsByTagName("IMG")[kortti].style.display = "block";
+document.getElementsByTagName("IMG")[kortti].style.position = "absolute";
+document.getElementsByTagName("IMG")[kortti].style.top = "560px";
+document.getElementsByTagName("IMG")[kortti].style.left = "900px";
+
+document.getElementsByTagName("IMG")[kortti].style.height = "150px";
+document.getElementsByTagName("IMG")[kortti].style.width = "150px";
+k5 = kortti;
+console.log(kortti);
+
+}
+
+}
+var aaa = 0;
+dfg();
+function dfg(){
+	if(k1 == k2){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k1 == k3){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k1 == k4){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k1 == k5){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+	if(k2 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k2 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k2 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k2 == k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+	if(k3 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k3 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k3 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k3 ==k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+
+
+	if(k4 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k4 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k4 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k4 == k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k5 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k5 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k5 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(k5 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	if(v1 == v2){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v1 == v3){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v1 == v4){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v1 == v5){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+	if(v2 == v1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v2 == v3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v2 == v4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v2 == v5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+	if(v3 == v1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v3 == v2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v3 == v4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v3 == v5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+
+
+	if(v4 == v1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v4 == v2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v4 == v3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v4 == v5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == v1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == v2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == v3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == v4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+
+
+
+
+
+	if(v1 == k1){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+	if(v1 == k2){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v1 == k3){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v1 == k4){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v1 == k5){
+localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+	if(v2 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+		if(v2 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v2 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v2 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v2 == k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+	if(v3 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v3 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+		if(v3 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v3 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v3 == k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+
+
+
+	if(v4 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v4 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v4 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}	if(v4 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v4 == k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == k1){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == k2){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == k3){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+	if(v5 == k4){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+		if(v5 == k5){
+		localStorage.setItem("onkokortti", "on");
+location.reload();
+	}
+
+	setTimeout(function(){dfg();},100);
+}
+
+
+
+
+
+var korttivihu = 0;
+function arvov2(){
+	korttivihu = Math.floor(Math.random()* 52 + 0);
+	v1 = korttivihu;
+	korttivihu = korttivihu + 52;
+	console.log(korttivihu);
+
+
+
+
+document.getElementsByTagName("IMG")[korttivihu].style.display = "block";
+document.getElementsByTagName("IMG")[korttivihu].style.position = "absolute";
+document.getElementsByTagName("IMG")[korttivihu].style.top = "80px";
+document.getElementsByTagName("IMG")[korttivihu].style.left = "100px";
+document.getElementsByTagName("IMG")[korttivihu].style.height = "150px";
+document.getElementsByTagName("IMG")[korttivihu].style.width = "150px";
+/////////////////////////////////
+
+console.log("ykkönfffffffffen  =    " + korttivihu);
+setTimeout(function(){qwerty2();}, 100);
+
+function qwerty2(){
+korttivihu = Math.floor(Math.random()* 52 + 0);
+v2 = korttivihu
+	korttivihu = korttivihu + 52;
+document.getElementsByTagName("IMG")[korttivihu].style.display = "block";
+document.getElementsByTagName("IMG")[korttivihu].style.position = "absolute";
+document.getElementsByTagName("IMG")[korttivihu].style.top = "80px";
+document.getElementsByTagName("IMG")[korttivihu].style.left = "300px";
+document.getElementsByTagName("IMG")[korttivihu].style.height = "150px";
+document.getElementsByTagName("IMG")[korttivihu].style.width = "150px";
+/////////////////////////
+
+console.log("ykköfffffffffnen  =    " + korttivihu);
+setTimeout(function(){qwerty3();}, 100);
+}
+function qwerty3(){
+korttivihu = Math.floor(Math.random()* 52 + 0);
+v3 = korttivihu;
+	korttivihu = korttivihu + 52;
+document.getElementsByTagName("IMG")[korttivihu].style.display = "block";
+document.getElementsByTagName("IMG")[korttivihu].style.position = "absolute";
+document.getElementsByTagName("IMG")[korttivihu].style.top = "80px";
+document.getElementsByTagName("IMG")[korttivihu].style.left = "500px";
+document.getElementsByTagName("IMG")[korttivihu].style.height = "150px";
+document.getElementsByTagName("IMG")[korttivihu].style.width = "150px";
+////////////////////////////////
+
+console.log("ykköffffffnen  =    " + korttivihu);
+setTimeout(function(){qwerty4();}, 100);
+}
+function qwerty4(){
+korttivihu = Math.floor(Math.random()* 52 + 0);
+v4 = korttivihu;
+	korttivihu = korttivihu + 52;
+
+document.getElementsByTagName("IMG")[korttivihu].style.display = "block";
+document.getElementsByTagName("IMG")[korttivihu].style.position = "absolute";
+document.getElementsByTagName("IMG")[korttivihu].style.top = "80px";
+document.getElementsByTagName("IMG")[korttivihu].style.left = "700px";
+document.getElementsByTagName("IMG")[korttivihu].style.height = "150px";
+document.getElementsByTagName("IMG")[korttivihu].style.width = "150px";
+console.log("ykköffffffnen  =    " + korttivihu);
+setTimeout(function(){qwerty5();}, 100);
+}
+function qwerty5(){
+korttivihu = Math.floor(Math.random()* 52 + 0);
+v5 = korttivihu;
+	korttivihu = korttivihu + 52;
+document.getElementsByTagName("IMG")[korttivihu].style.display = "block";
+document.getElementsByTagName("IMG")[korttivihu].style.position = "absolute";
+document.getElementsByTagName("IMG")[korttivihu].style.top = "80px";
+document.getElementsByTagName("IMG")[korttivihu].style.left = "900px";
+document.getElementsByTagName("IMG")[korttivihu].style.height = "150px";
+document.getElementsByTagName("IMG")[korttivihu].style.width = "150px";
+
+console.log(korttivihu);
+
+}
+}
+var aika = 0;
+sssss();
+function sssss(){
+	aika = aika +1;
+	setTimeout(function(){sssss();}, 50000);
+}
+
+var siirtomaakorttionko2 = false;
+var siirtomaakorttionko1 = false;
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//TÄSTÄ ALKAA ALUE MIKÄ PITÄÄ MUUTTAA ENNEN JULKAISUA NIIN SRC 49 CHARTA ON SE TOINEN
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+function siirtomaaa(){
+	//vaiha nää kaks kasiksi tuol alhaal
+		// muista vaihtaa nuo alhaalla olevat jutut oikein
+var miknum1 = document.getElementsByTagName("IMG")[k1].src;
+	if(miknum1.charAt(48) == "1"){if(miknum1.charAt(49) == "0"){//tee kympin koodi 
+		nykynumero = 10;}else{//tee ykkösen koodi
+			nykynumero = 1;}}
+
+if(miknum1.charAt(48) == "2"){nykynumero = 2;}
+if(miknum1.charAt(48) == "3"){nykynumero = 3;}
+if(miknum1.charAt(48) == "4"){nykynumero = 4;}
+	if(miknum1.charAt(48) == "5"){nykynumero = 5;}
+	if(miknum1.charAt(48) == "6"){nykynumero = 6;}
+	if(miknum1.charAt(48) == "7"){nykynumero = 7;}
+	if(miknum1.charAt(48) == "8"){nykynumero = 8;}
+	if(miknum1.charAt(48) == "9"){nykynumero = 9;}
+	if(miknum1.charAt(48) == "10"){nykynumero = 10;}
+	if(miknum1.charAt(48) == "J"){nykynumero = 11;}
+	if(miknum1.charAt(48) == "Q"){nykynumero = 12;}
+	if(miknum1.charAt(48) == "K"){nykynumero = 13;}
+	if(miknum1.charAt(48) == "A"){nykynumero = 14;}
+// vaiha nää kaks kasikisi tuol ylhööl
+
+
+	/////////////////////////////////////////////////
+	var tunte1 = document.getElementsByTagName("IMG")[k1].src;
+			//vaihda 29 nuo alhaal charatit
+			if(tunte1.charAt(49) == "0"){
+
+	if(tunte1.charAt(50) == "S"){nykymaa = "pata";}
+	if(tunte1.charAt(50) == "D"){nykymaa = "ruutu";}
+	if(tunte1.charAt(50) == "C"){nykymaa = "risti";}
+	if(tunte1.charAt(50) == "H"){nykymaa = "hertta";}
+
+			}	
+
+	if(tunte1.charAt(49) == "S"){nykymaa = "pata";}
+	if(tunte1.charAt(49) == "D"){nykymaa = "ruutu";}
+	if(tunte1.charAt(49) == "C"){nykymaa = "risti";}
+	if(tunte1.charAt(49) == "H"){nykymaa = "hertta";}
+		//vaihda 29 nuo ylhääl charatit
+document.getElementsByTagName("IMG")[k1].id="liiku1";
+siirtomaakorttionko1 = true;
+
+document.getElementById("korttioma1").remove();
+if(siirtomaakorttionko2 == true){document.getElementsByTagName("IMG")[k2].style.display = "none";}
+if(siirtomaakorttionko3 == true){document.getElementsByTagName("IMG")[k3].style.display = "none";}
+if(siirtomaakorttionko5 == true){document.getElementsByTagName("IMG")[k5].style.display = "none";}
+if(siirtomaakorttionko4 == true){document.getElementsByTagName("IMG")[k4].style.display = "none";}
+setTimeout(function(){document.getElementsByTagName("IMG")[k1].id="pysahy1";}, 2000);
+}
+function siirtomaab(){
+	// vaiha nää 28 siksi tos alhaal
+		// muista vaihtaa nuo alhaalla olevat jutut oikein
+	var miknum2 = document.getElementsByTagName("IMG")[k2].src;
+if(miknum2.charAt(48) == "1"){if(miknum2.charAt(49) == "0"){//tee kympin koodi 
+		nykynumero = 10;}else{//tee ykkösen koodi
+		nykynumero = 1;}}
+	if(miknum2.charAt(48) == "2"){nykynumero = 2;}
+	if(miknum2.charAt(48) == "3"){nykynumero = 3;}
+	if(miknum2.charAt(48) == "4"){nykynumero = 4;}
+	if(miknum2.charAt(48) == "5"){nykynumero = 5;}
+	if(miknum2.charAt(48) == "6"){nykynumero = 6;}
+	if(miknum2.charAt(48) == "7"){nykynumero = 7;}
+	if(miknum2.charAt(48) == "8"){nykynumero = 8;}
+	if(miknum2.charAt(48) == "9"){nykynumero = 9;}
+	if(miknum2.charAt(48) == "10"){nykynumero = 10;}
+	if(miknum2.charAt(48) == "J"){nykynumero = 11;}
+	if(miknum2.charAt(48) == "Q"){nykynumero = 12;}
+	if(miknum2.charAt(48) == "K"){nykynumero = 13;}
+	if(miknum2.charAt(48) == "A"){nykynumero = 14;}
+	// vaiha nää kaks kasiksi tuol ulhööl
+		var tunte2 = document.getElementsByTagName("IMG")[k2].src;
+				//vaihda 29 nuo alhaal charatit
+							if(tunte2.charAt(49) == "0"){
+
+	if(tunte2.charAt(50) == "S"){nykymaa = "pata";}
+	if(tunte2.charAt(50) == "D"){nykymaa = "ruutu";}
+	if(tunte2.charAt(50) == "C"){nykymaa = "risti";}
+	if(tunte2.charAt(50) == "H"){nykymaa = "hertta";}
+
+			}	
+	if(tunte2.charAt(49) == "S"){nykymaa = "pata";}
+	if(tunte2.charAt(49) == "D"){nykymaa = "ruutu";}
+	if(tunte2.charAt(49) == "C"){nykymaa = "risti";}
+	if(tunte2.charAt(49) == "H"){nykymaa = "hertta";}
+			//vaihda 29 nuo ylhääl charatit
+if(siirtomaakorttionko1 == true){document.getElementsByTagName("IMG")[k1].style.display = "none";}
+if(siirtomaakorttionko3 == true){document.getElementsByTagName("IMG")[k3].style.display = "none";}
+if(siirtomaakorttionko5 == true){document.getElementsByTagName("IMG")[k5].style.display = "none";}
+if(siirtomaakorttionko4 == true){document.getElementsByTagName("IMG")[k4].style.display = "none";}
+document.getElementsByTagName("IMG")[k2].id="liiku2";
+siirtomaakorttionko2 = true;
+document.getElementById("korttioma2").remove();
+setTimeout(function(){document.getElementsByTagName("IMG")[k2].id="pysahy12";}, 2000);
+}
+
+function siirtomaac(){
+	var miknum3 = document.getElementsByTagName("IMG")[k3].src;
+		// muista vaihtaa nuo alhaalla olevat jutut oikein
+if(miknum3.charAt(48) == "1"){if(miknum3.charAt(49) == "0"){//tee kympin koodi 
+	nykynumero = 10;}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknum3.charAt(48) == "2"){	nykynumero = 2;}
+	if(miknum3.charAt(48) == "3"){	nykynumero = 3;}
+	if(miknum3.charAt(48) == "4"){	nykynumero = 4;}
+	if(miknum3.charAt(48) == "5"){	nykynumero = 5;}
+	if(miknum3.charAt(48) == "6"){	nykynumero = 6;}
+	if(miknum3.charAt(48) == "7"){	nykynumero = 7;}
+	if(miknum3.charAt(48) == "8"){	nykynumero = 8;}
+	if(miknum3.charAt(48) == "9"){	nykynumero = 9;}
+	if(miknum3.charAt(48) == "10"){	nykynumero = 10;}
+	if(miknum3.charAt(48) == "J"){	nykynumero = 11;}
+	if(miknum3.charAt(48) == "Q"){	nykynumero = 12;}
+	if(miknum3.charAt(48) == "K"){	nykynumero = 13;}
+	if(miknum3.charAt(48) == "A"){	nykynumero = 14;}
+// vaiha nää kaks kasikisi tuol ylhööl
+		var tunte3 = document.getElementsByTagName("IMG")[k3].src;
+				//vaihda 29 nuo alhaal charatit
+							if(tunte3.charAt(49) == "0"){
+
+	if(tunte3.charAt(50) == "S"){console.log("PATA");}
+	if(tunte3.charAt(50) == "D"){console.log("RUUTU");}
+	if(tunte3.charAt(50) == "C"){console.log("Risti");}
+	if(tunte3.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tunte3.charAt(49) == "S"){console.log("PATA");}
+	if(tunte3.charAt(49) == "D"){console.log("RUUTU");}
+	if(tunte3.charAt(49) == "C"){console.log("Risti");}
+	if(tunte3.charAt(49) == "H"){console.log("Hertta");}
+			//vaihda 29 nuo ylhääl charatit
+if(siirtomaakorttionko1 == true){document.getElementsByTagName("IMG")[k1].style.display = "none";}
+if(siirtomaakorttionko2 == true){document.getElementsByTagName("IMG")[k2].style.display = "none";}
+if(siirtomaakorttionko4 == true){document.getElementsByTagName("IMG")[k4].style.display = "none";}
+if(siirtomaakorttionko5 == true){document.getElementsByTagName("IMG")[k5].style.display = "none";}
+document.getElementsByTagName("IMG")[k3].id="liiku3";
+siirtomaakorttionko3 = true;
+document.getElementById("korttioma3").remove();
+setTimeout(function(){document.getElementsByTagName("IMG")[k3].id="pysahy123";}, 2000);
+}
+
+function siirtomaad(){
+		// vaiha nää 28 siksi tos alhaal
+			// muista vaihtaa nuo alhaalla olevat jutut oikein
+	var miknum4 = document.getElementsByTagName("IMG")[k4].src;
+if(miknum4.charAt(48) == "1"){if(miknum4.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknum4.charAt(48) == "2"){console.log("2");}
+	if(miknum4.charAt(48) == "3"){console.log("3");}
+	if(miknum4.charAt(48) == "4"){console.log("4");}
+	if(miknum4.charAt(48) == "5"){console.log("5");}
+	if(miknum4.charAt(48) == "6"){console.log("6");}
+	if(miknum4.charAt(48) == "7"){console.log("7");}
+	if(miknum4.charAt(48) == "8"){console.log("8");}
+	if(miknum4.charAt(48) == "9"){console.log("9");}
+	if(miknum4.charAt(48) == "10"){console.log("10");}
+	if(miknum4.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknum4.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknum4.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknum4.charAt(48) == "A"){console.log("14, eli ässä");}
+	// vaiha nää kaks kasiksi tuol ulhööl
+		var tunte4 = document.getElementsByTagName("IMG")[k4].src;
+				//vaihda 29 nuo alhaal charatit
+							if(tunte4.charAt(49) == "0"){
+
+	if(tunte4.charAt(50) == "S"){console.log("PATA");}
+	if(tunte4.charAt(50) == "D"){console.log("RUUTU");}
+	if(tunte4.charAt(50) == "C"){console.log("Risti");}
+	if(tunte4.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tunte4.charAt(49) == "S"){console.log("PATA");}
+	if(tunte4.charAt(49) == "D"){console.log("RUUTU");}
+	if(tunte4.charAt(49) == "C"){console.log("Risti");}
+	if(tunte4.charAt(49) == "H"){console.log("Hertta");}
+			//vaihda 29 nuo ylhääl charatit
+if(siirtomaakorttionko1 == true){document.getElementsByTagName("IMG")[k1].style.display = "none";}
+if(siirtomaakorttionko2 == true){document.getElementsByTagName("IMG")[k2].style.display = "none";}
+if(siirtomaakorttionko3 == true){document.getElementsByTagName("IMG")[k3].style.display = "none";}
+if(siirtomaakorttionko5 == true){document.getElementsByTagName("IMG")[k5].style.display = "none";}
+document.getElementsByTagName("IMG")[k4].id="liiku4";
+siirtomaakorttionko4 = true;
+document.getElementById("korttioma4").remove();
+setTimeout(function(){document.getElementsByTagName("IMG")[k4].id="pysahy1234";}, 2000);
+}
+
+function siirtomaae(){
+		// vaiha nää 28 siksi tos alhaal
+		// muista vaihtaa nuo alhaalla olevat jutut oikein
+	var miknum5 = document.getElementsByTagName("IMG")[k5].src;
+if(miknum5.charAt(48) == "1"){if(miknum5.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknum5.charAt(48) == "2"){console.log("2");}
+	if(miknum5.charAt(48) == "3"){console.log("3");}
+	if(miknum5.charAt(48) == "4"){console.log("4");}
+	if(miknum5.charAt(48) == "5"){console.log("5");}
+	if(miknum5.charAt(48) == "6"){console.log("6");}
+	if(miknum5.charAt(48) == "7"){console.log("7");}
+	if(miknum5.charAt(48) == "8"){console.log("8");}
+	if(miknum5.charAt(48) == "9"){console.log("9");}
+	if(miknum5.charAt(48) == "10"){console.log("10");}
+	if(miknum5.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknum5.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknum5.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknum5.charAt(48) == "A"){console.log("14, eli ässä");}
+	// vaiha nää kaks kasiksi tuol ulhööl
+		var tunte5 = document.getElementsByTagName("IMG")[k5].src;
+		//vaihda 29 nuo alhaal charatit
+					if(tunte5.charAt(49) == "0"){
+
+	if(tunte5.charAt(50) == "S"){console.log("PATA");}
+	if(tunte5.charAt(50) == "D"){console.log("RUUTU");}
+	if(tunte5.charAt(50) == "C"){console.log("Risti");}
+	if(tunte5.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tunte5.charAt(49) == "S"){console.log("PATA");}
+	if(tunte5.charAt(49) == "D"){console.log("RUUTU");}
+	if(tunte5.charAt(49) == "C"){console.log("Risti");}
+	if(tunte5.charAt(49) == "H"){console.log("Hertta");}
+			//vaihda 29 nuo ylhääl charatit
+if(siirtomaakorttionko1 == true){document.getElementsByTagName("IMG")[k1].style.display = "none";}
+if(siirtomaakorttionko2 == true){document.getElementsByTagName("IMG")[k2].style.display = "none";}
+if(siirtomaakorttionko4 == true){document.getElementsByTagName("IMG")[k4].style.display = "none";}
+if(siirtomaakorttionko3 == true){document.getElementsByTagName("IMG")[k3].style.display = "none";}
+document.getElementsByTagName("IMG")[k5].id="liiku5";
+siirtomaakorttionko5 = true;
+document.getElementById("korttioma5").remove();
+setTimeout(function(){document.getElementsByTagName("IMG")[k5].id="pysahy12345";}, 2000);
+}
+var siirtomaakorttionko3 = false;
+var siirtomaakorttionko4 = false;
+var siirtomaakorttionko5 = false;
+//  https://testi1234567.herokuapp.com/honor_clubs.png
+// https://katku.herokuapp.com/6C.png
+
+function tieäv(){
+	tieäv1();
+	function tieäv1(){
+		v1 = v1 + 52;
+			var tuntevih = document.getElementsByTagName("IMG")[v1].src;
+		//vaihda 29 nuo alhaal charatit
+					if(tuntevih.charAt(49) == "0"){
+
+	if(tuntevih.charAt(50) == "S"){console.log("PATA");}
+	if(tuntevih.charAt(50) == "D"){console.log("RUUTU");}
+	if(tuntevih.charAt(50) == "C"){console.log("Risti");}
+	if(tuntevih.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tuntevih.charAt(49) == "S"){console.log("PATA");}
+	if(tuntevih.charAt(49) == "D"){console.log("RUUTU");}
+	if(tuntevih.charAt(49) == "C"){console.log("Risti");}
+	if(tuntevih.charAt(49) == "H"){console.log("Hertta");}
+
+			var miknumvih = document.getElementsByTagName("IMG")[v1].src;
+if(miknumvih.charAt(48) == "1"){if(miknumvih.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknumvih.charAt(48) == "2"){console.log("2");}
+	if(miknumvih.charAt(48) == "3"){console.log("3");}
+	if(miknumvih.charAt(48) == "4"){console.log("4");}
+	if(miknumvih.charAt(48) == "5"){console.log("5");}
+	if(miknumvih.charAt(48) == "6"){console.log("6");}
+	if(miknumvih.charAt(48) == "7"){console.log("7");}
+	if(miknumvih.charAt(48) == "8"){console.log("8");}
+	if(miknumvih.charAt(48) == "9"){console.log("9");}
+	if(miknumvih.charAt(48) == "10"){console.log("10");}
+	if(miknumvih.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknumvih.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknumvih.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknumvih.charAt(48) == "A"){console.log("14, eli ässä");}
+	tieäv2();
+	}
+function tieäv2(){
+			v2 = v2 + 52;
+			var tuntevih2 = document.getElementsByTagName("IMG")[v2].src;
+		//vaihda 29 nuo alhaal charatit
+					if(tuntevih2.charAt(49) == "0"){
+
+	if(tuntevih2.charAt(50) == "S"){console.log("PATA");}
+	if(tuntevih2.charAt(50) == "D"){console.log("RUUTU");}
+	if(tuntevih2.charAt(50) == "C"){console.log("Risti");}
+	if(tuntevih2.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tuntevih2.charAt(49) == "S"){console.log("PATA");}
+	if(tuntevih2.charAt(49) == "D"){console.log("RUUTU");}
+	if(tuntevih2.charAt(49) == "C"){console.log("Risti");}
+	if(tuntevih2.charAt(49) == "H"){console.log("Hertta");}
+
+			var miknumvih2 = document.getElementsByTagName("IMG")[v2].src;
+if(miknumvih2.charAt(48) == "1"){if(miknumvih2.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknumvih2.charAt(48) == "2"){console.log("2");}
+	if(miknumvih2.charAt(48) == "3"){console.log("3");}
+	if(miknumvih2.charAt(48) == "4"){console.log("4");}
+	if(miknumvih2.charAt(48) == "5"){console.log("5");}
+	if(miknumvih2.charAt(48) == "6"){console.log("6");}
+	if(miknumvih2.charAt(48) == "7"){console.log("7");}
+	if(miknumvih2.charAt(48) == "8"){console.log("8");}
+	if(miknumvih2.charAt(48) == "9"){console.log("9");}
+	if(miknumvih2.charAt(48) == "10"){console.log("10");}
+	if(miknumvih2.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknumvih2.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknumvih2.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknumvih2.charAt(48) == "A"){console.log("14, eli ässä");}
+	tieäv3();
+}
+function tieäv3(){
+				v3 = v3 + 52;
+			var tuntevih3 = document.getElementsByTagName("IMG")[v3].src;
+		//vaihda 29 nuo alhaal charatit
+					if(tuntevih3.charAt(49) == "0"){
+
+	if(tuntevih3.charAt(50) == "S"){console.log("PATA");}
+	if(tuntevih3.charAt(50) == "D"){console.log("RUUTU");}
+	if(tuntevih3.charAt(50) == "C"){console.log("Risti");}
+	if(tuntevih3.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tuntevih3.charAt(49) == "S"){console.log("PATA");}
+	if(tuntevih3.charAt(49) == "D"){console.log("RUUTU");}
+	if(tuntevih3.charAt(49) == "C"){console.log("Risti");}
+	if(tuntevih3.charAt(49) == "H"){console.log("Hertta");}
+
+			var miknumvih3 = document.getElementsByTagName("IMG")[v3].src;
+if(miknumvih3.charAt(48) == "1"){if(miknumvih3.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknumvih3.charAt(48) == "2"){console.log("2");}
+	if(miknumvih3.charAt(48) == "3"){console.log("3");}
+	if(miknumvih3.charAt(48) == "4"){console.log("4");}
+	if(miknumvih3.charAt(48) == "5"){console.log("5");}
+	if(miknumvih3.charAt(48) == "6"){console.log("6");}
+	if(miknumvih3.charAt(48) == "7"){console.log("7");}
+	if(miknumvih3.charAt(48) == "8"){console.log("8");}
+	if(miknumvih3.charAt(48) == "9"){console.log("9");}
+	if(miknumvih3.charAt(48) == "10"){console.log("10");}
+	if(miknumvih3.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknumvih3.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknumvih3.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknumvih3.charAt(48) == "A"){console.log("14, eli ässä");}
+	tieäv4();
+
+}
+function tieäv4(){
+					v4 = v4 + 52;
+			var tuntevih4 = document.getElementsByTagName("IMG")[v4].src;
+		//vaihda 29 nuo alhaal charatit
+					if(tuntevih4.charAt(49) == "0"){
+
+	if(tuntevih4.charAt(50) == "S"){console.log("PATA");}
+	if(tuntevih4.charAt(50) == "D"){console.log("RUUTU");}
+	if(tuntevih4.charAt(50) == "C"){console.log("Risti");}
+	if(tuntevih4.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tuntevih4.charAt(49) == "S"){console.log("PATA");}
+	if(tuntevih4.charAt(49) == "D"){console.log("RUUTU");}
+	if(tuntevih4.charAt(49) == "C"){console.log("Risti");}
+	if(tuntevih4.charAt(49) == "H"){console.log("Hertta");}
+
+			var miknumvih4 = document.getElementsByTagName("IMG")[v4].src;
+if(miknumvih4.charAt(48) == "1"){if(miknumvih4.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknumvih4.charAt(48) == "2"){console.log("2");}
+	if(miknumvih4.charAt(48) == "3"){console.log("3");}
+	if(miknumvih4.charAt(48) == "4"){console.log("4");}
+	if(miknumvih4.charAt(48) == "5"){console.log("5");}
+	if(miknumvih4.charAt(48) == "6"){console.log("6");}
+	if(miknumvih4.charAt(48) == "7"){console.log("7");}
+	if(miknumvih4.charAt(48) == "8"){console.log("8");}
+	if(miknumvih4.charAt(48) == "9"){console.log("9");}
+	if(miknumvih4.charAt(48) == "10"){console.log("10");}
+	if(miknumvih4.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknumvih4.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknumvih4.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknumvih4.charAt(48) == "A"){console.log("14, eli ässä");}
+	tieäv5();
+}
+function tieäv5(){
+						v5 = v5 + 52;
+			var tuntevih5 = document.getElementsByTagName("IMG")[v5].src;
+		//vaihda 29 nuo alhaal charatit
+					if(tuntevih5.charAt(49) == "0"){
+
+	if(tuntevih5.charAt(50) == "S"){console.log("PATA");}
+	if(tuntevih5.charAt(50) == "D"){console.log("RUUTU");}
+	if(tuntevih5.charAt(50) == "C"){console.log("Risti");}
+	if(tuntevih5.charAt(50) == "H"){console.log("Hertta");}
+
+			}	
+	if(tuntevih5.charAt(49) == "S"){console.log("PATA");}
+	if(tuntevih5.charAt(49) == "D"){console.log("RUUTU");}
+	if(tuntevih5.charAt(49) == "C"){console.log("Risti");}
+	if(tuntevih5.charAt(49) == "H"){console.log("Hertta");}
+
+			var miknumvih5 = document.getElementsByTagName("IMG")[v5].src;
+if(miknumvih5.charAt(48) == "1"){if(miknumvih5.charAt(49) == "0"){//tee kympin koodi 
+		console.log("10");}else{//tee ykkösen koodi
+			console.log("1");}}
+	if(miknumvih5.charAt(48) == "2"){console.log("2");}
+	if(miknumvih5.charAt(48) == "3"){console.log("3");}
+	if(miknumvih5.charAt(48) == "4"){console.log("4");}
+	if(miknumvih5.charAt(48) == "5"){console.log("5");}
+	if(miknumvih5.charAt(48) == "6"){console.log("6");}
+	if(miknumvih5.charAt(48) == "7"){console.log("7");}
+	if(miknumvih5.charAt(48) == "8"){console.log("8");}
+	if(miknumvih5.charAt(48) == "9"){console.log("9");}
+	if(miknumvih5.charAt(48) == "10"){console.log("10");}
+	if(miknumvih5.charAt(48) == "J"){console.log("11, eli jätkä");}
+	if(miknumvih5.charAt(48) == "Q"){console.log("12 eli kuningatar");}
+	if(miknumvih5.charAt(48) == "K"){console.log("13, eli kunkku");}
+	if(miknumvih5.charAt(48) == "A"){console.log("14, eli ässä");}
+
+}
+}
+// https://katku.herokuapp.com/6C.png
+
+// jäit siirtomaa c hen eli kolmantee, ehit tehä numerot muttaa maat jäi keske
+
+
+var nykynumero = 0;
+var nykymaa = 0;
+</script>
+
+</body>
+</html>

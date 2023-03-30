@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body class="bodu">
+<img id="kuv" src="https://lh3.googleusercontent.com/45WynzW1xG03oIJCWLZcYKhpMSZGPJsM7joKuXa3baqUBx_oUofSrm29bikyHz7fow6eQ_Dg0wRX-nDEb0piHwg4iUe8zE-7JLTBhF_6mdQhCGz6oyn2XGPgK7nXIRRktgMEkDLLAQ=w2400">
+
+<style type="text/css">
+	
+.d{
+	width: 100px;
+	height: 50px;
+	background-color: red;
+}
+
+.bodu{
+	background-color: black;
+}
+#er{
+	width: 1500px;
+	height:700px;
+	background-color: transparent;
+}
+
+#kuv{
+	position:absolute;
+	top:260px;
+	left:550px;
+
+}
+
+</style>
+<div onclick="erf();" id="er"></div>
+
+
+
+
+<script>
+
+	function erf(){
+		maa = 0;
+asx = 20;
+pum();
+		//location.reload();
+	}
+	var kerra = 0;
+	var maa = 0;
+var asx = 40;
+
+	
+function pum(){
+	var dcv = document.getElementById("kuv");
+dcv.style.display = "none";
+if(maa < asx){
+	
+		console.log("W");
+	
+	var div = document.createElement("INPUT"); 
+
+div.style.width ='310px'; 
+div.style.height = "310px"; 
+div.id = "inputti6000";
+ div.style.position = "absolute";
+div.style.top ='250px';
+div.style.left = '700px';
+
+document.body.appendChild(div);
+
+
+
+
+var button5538 = document.createElement("button");
+button5538.style.width ='50px'; 
+button5538.style.height = "30px";
+button5538.style.position = "absolute";
+button5538.style.top ='250px';
+button5538.style.left = '880px';
+button5538.innerHTML = "Run";
+
+
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button5538);
+
+
+button5538.addEventListener ("click", function() {
+ var fvvvv111 = document.getElementById("inputti6000").value;
+ alert(fvvvv111);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var x = xc;
+var y = yc;
+var xd = Math.floor(Math.random()* 100 + 1);
+var yd = Math.floor(Math.random()* 100 + 1);
+yd = yd / 10;
+xd = xd / 10;
+var t = Math.floor(Math.random()* 4 + 1);
+if(t == 1){
+	f();
+}
+if(t == 2){
+df();
+}
+if(t == 3){
+	bdf();
+}
+if(t == 4){
+	adf();
+}
+function f(){
+	if(y < 700){
+		if(x < 1480){
+ div.style.position = "absolute";
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y + yd;
+x = x + xd;
+setTimeout(function(){f();}, 20);
+}else{div.remove();}
+}else{div.remove();}
+}
+
+
+
+function df(){
+if(x < 1480){
+ div.style.position = "absolute";
+
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y - yd;
+x = x + xd;
+setTimeout(function(){df();}, 20);
+}else{div.remove();}
+}
+
+
+function adf(){
+if(y < 700){
+	if(x > 0){
+ div.style.position = "absolute";
+
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y + yd;
+x = x - xd;
+setTimeout(function(){adf();}, 20);
+}else{div.remove();}}else{div.remove();}
+}
+kerra = 1;
+
+function bdf(){
+	if(x > 0){
+ div.style.position = "absolute";
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y - yd;
+x = x - xd;
+setTimeout(function(){bdf();}, 20);
+}else{div.remove();}
+}
+setTimeout(function(){pum();}, 0.03);
+
+
+
+maa = maa + 1;
+}
+}
+var xc = 0;
+var yc = 0;
+function tellPos(p){
+  yc = p.pageY;
+  xc = p.pageX;
+}
+addEventListener('mousemove', tellPos, false);
+
+
+
+
+
+</script>
+</body>
+</html>

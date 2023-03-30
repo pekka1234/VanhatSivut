@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="di"></div>
+<div id="a" class="w"></div>
+<div id="d" class="w2"></div>
+<div id="c" class="w22"></div>
+<audio id="myAudio">
+  <source src="piano1.wav" type="audio/wav">
+</audio>
+
+<audio id="myAudio2">
+  <source src="piano2.wav" type="audio/wav">
+    </audio>
+
+           <button onclick="playAudio3();">Paina</button><audio id="myAudio3">
+  <source src="piano3.wav" type="audio/wav">
+    </audio>
+<script>
+    
+var audio = document.getElementById("myAudio");
+var audio2 = document.getElementById("myAudio2");
+var audio3 = document.getElementById("myAudio3");
+function playAudio() {
+      audio.currentTime = 0;
+      audio.play();
+
+}
+function playAudio2() {
+      audio2.currentTime = 0;
+      audio2.play();
+
+}
+function playAudio3() {
+      audio3.currentTime = 0;
+      audio3.play();
+
+}
+
+document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 70) { 
+        
+       playAudio();
+       document.getElementById("a").style.backgroundColor = "black";
+       setTimeout(function(){       document.getElementById("a").style.backgroundColor = "white";}, 1270);
+       
+        } else if (event.keyCode === 71) { 
+                       document.getElementById("d").style.backgroundColor = "black";
+       setTimeout(function(){       document.getElementById("d").style.backgroundColor = "white";}, 1270);
+        playAudio2();
+       
+        } else if (event.keyCode === 72) { 
+                       document.getElementById("c").style.backgroundColor = "black";
+       setTimeout(function(){       document.getElementById("c").style.backgroundColor = "white";}, 1270);
+            playAudio3();
+        
+        } 
+});
+</script>
+
+<style type="text/css">
+  
+
+  .di{
+    position: absolute;
+    top:200px;
+    left:400px;
+    width:779px;
+    height:300px;
+    border-style: solid;
+    border-width: 5px;
+  }
+  .w{
+        position: absolute;
+    top:200px;
+    left:400px;
+        width:260px;
+    height:300px;
+        border-style: solid;
+    border-width: 5px;
+  }
+    .w2{
+        position: absolute;
+    top:200px;
+    left:660px;
+        width:260px;
+    height:300px;
+        border-style: solid;
+    border-width: 5px;
+  }
+    .w22{
+        position: absolute;
+    top:200px;
+    left:920px;
+        width:260px;
+    height:300px;
+        border-style: solid;
+    border-width: 5px;
+  }
+</style>
+</body>
+</html>

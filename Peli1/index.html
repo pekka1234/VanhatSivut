@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body class="w">
+<img id="k1" src="https://lh3.googleusercontent.com/dMvS0fmZwA7pBhhB9yMHTfO8EXzrVOJP0vNvUmJdlrBP-X7C86QUDE92KRLNdeUsTOSucaZz75bmuxq78Xp9oP7rJ7lKPZnOkspFdpgM-0pWcJU7mjh5wWnM13PjeOPNovnDCGh-Bw=w2400">
+<img id="k2" src="https://lh3.googleusercontent.com/01zqX46lO-f_W95LB0zk1D-Yyh3NejRl9tVZVgkCzRvVWIFBdE_W7PwLOtDkTUUliHuX8B-G4RR8fwxXRXvAZaKtEM3VSLRtS7BCIqwe2-eFbmLZOjBSIy-JCjroBfbiMpImCnmoIg=w2400">
+
+
+<h1 id="punael">Elämät: 20</h1>
+<h1 id="siniel">Elämät: 20</h1>
+<style>
+
+.w{
+background-color: black;
+height:745px;
+
+}
+#k1ammu{
+	position:absolute;
+	top:10px;
+	left:60px;
+	font-size: 30px;
+	color:white;
+}
+#k1ammu2{
+		position:absolute;
+	top:10px;
+	right:70px;
+	font-size: 30px;
+	color:white;
+}
+
+
+#punael{
+			position:absolute;
+	top:10px;
+	right:290px;
+	font-size: 30px;
+	color:white;
+}
+
+
+
+
+#siniel{
+			position:absolute;
+	top:10px;
+	left:290px;
+	font-size: 30px;
+	color:white;
+}
+</style>
+<h1 id="k1ammu">Ammukset:</h1>
+<h1 id="k1ammu2">Ammukset:</h1>
+<script>
+	
+
+
+const width  = window.innerWidth || document.documentElement.clientWidth || 
+document.body.clientWidth;
+const height = window.innerHeight|| document.documentElement.clientHeight|| 
+document.body.clientHeight;
+
+console.log(width, height);
+
+var ku1 = document.getElementById("k1");
+ku1.style.position = "relative";
+ku1.style.top = '250px';
+ku1.style.width = '150px';
+ku1.style.height = '110px';
+
+
+
+var wi = width * 1.5;
+wi = wi / 2;
+console.log("tddd" + wi);
+var ku2 = document.getElementById("k2");
+ku2.style.position = "fixed";
+ku2.style.top ='250px';
+ku2.style.left =  '1252px';
+ku2.style.width = '150px';
+ku2.style.height = '110px';
+
+var dh = height;
+dh = dh - 100;
+
+
+
+
+var kumpis = 0;
+document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 81) { //w
+        
+        kumpis = 1;
+       
+        } else if (event.keyCode === 65) { //s
+            	
+        	kumpis = 2;
+       
+        } else if (event.keyCode === 90) { //s
+            	
+        	ku1am();
+        
+        } 
+
+
+
+});
+yksyl();
+var kx2 = 250;
+function yksyl(){
+	if(kumpis == 1){
+		if(kx2 > 50){		var ku1 = document.getElementById("k1");
+ku1.style.position = "relative";
+ku1.style.top = kx2 +'px';
+kx2 = kx2 + -3;
+fti = kx2;}else{
+	kx2 = 50;
+}
+
+
+	}
+		if(kumpis == 2){
+			if(kx2 < 650){	var ku1 = document.getElementById("k1");
+ku1.style.position = "relative";
+ku1.style.top = kx2 +'px';
+kx2 = kx2 + 3;fti = kx2;}else{
+	kx2 = 650;
+}
+	}
+	var ku1 = document.getElementById("k1");
+	ku1.style.position = "relative";
+	ku1wwwc = ku1.style.top;
+	setTimeout(function(){yksyl();}, 10);
+	
+
+}
+
+
+var ku1wwwc = null;
+
+
+
+
+
+
+var punasenelama = 20;
+
+
+
+
+var kumpis2 = 0;
+document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 186) { //w
+        
+        kumpis2 = 1;
+        console.log(kumpis);
+        } else if (event.keyCode === 222) { //s
+            	
+        	kumpis2 = 2;
+        	console.log(kumpis);
+        }else if (event.keyCode === 189) { //s
+            	
+        	ammu2varmuu();
+        	console.log(kumpis);
+        }  
+});
+yksyl2();
+var kx22 = 250;
+function yksyl2(){
+	if(kumpis2 == 1){
+		if(kx22 > 50){		var ku2 = document.getElementById("k2");
+ku2.style.position = "fixed";
+ku2.style.top = kx22 +'px';
+kx22 = kx22 + -3;
+kels = kx22;}else{
+	kx22 = 50;
+}
+
+
+	}
+		if(kumpis2 == 2){
+			if(kx22 < 650){	var ku2 = document.getElementById("k2");
+ku2.style.position = "fixed";
+ku2.style.top = kx22 +'px';
+kx22 = kx22 + 3; 
+kels = kx22;}else{
+	kx22 =650;
+}
+	}
+	setTimeout(function(){yksyl2();}, 10);
+
+
+}
+var kx22 = 250;
+
+
+
+
+
+
+var onk = true;
+var onkm = 4;
+ain();
+function ain(){
+	if(onkm < 5){
+onkm = onkm + 1;
+var tekstik1ammukset = document.getElementById("k1ammu").innerHTML = "Ammukset: " + onkm;
+console.log(onkm);
+}
+setTimeout(function(){ain();}, 1000);
+
+}
+
+
+
+function ku1am(){
+
+if(onkm > 0){
+	var hh = true;
+	onkm = onkm - 1;
+	var tekstik1ammukset = document.getElementById("k1ammu").innerHTML = "Ammukset: " + onkm;
+	var div = document.createElement("DIV");   // Create a <button> element
+
+var axc = true;
+div.style.backgroundColor = "blue";  
+div.style.width ='25px'; 
+div.style.height = "14px"; 
+
+ div.style.position = "absolute";
+div.style.top ='250px';
+div.style.left = '70px';
+console.log(onkm);
+document.body.appendChild(div);
+var xk1v = kx2;
+xk1v = xk1v + 50;
+var leftari2 = 150;
+console.log(xk1v);
+ddsx();
+function ddsx(){
+	if(leftari2 > 1450){
+		div.remove();
+		axc = false;
+	}else{
+	setTimeout(function(){ddsx();}, 30);}
+}
+ftopay();
+function ftopay(){
+
+	if(leftari2 > 1296){
+onkovaieikokosketus();
+
+}
+ div.style.position = "absolute";
+
+div.style.top = xk1v + 'px';
+
+div.style.left = + leftari2 + 'px';
+leftari2 = leftari2 + 5;
+
+setTimeout(function(){ftopay();}, 10);
+}
+
+function onkovaieikokosketus(){
+
+if(hh){
+	var tdn = xk1v - 50;
+	var kuvakakx = kx22 - 50;
+	var kuvakaky = kx22 + 50;
+
+	if(tdn < kuvakaky){
+if(tdn > kuvakakx){
+	if(punasenelama <2 ){
+	dfhj();
+hh = false;
+	}else{
+punasenelama = punasenelama -1;
+document.getElementById("punael").innerHTML = "Elämät: " + punasenelama;
+hh = false;
+}
+}
+}
+if(axc){setTimeout(function(){onkovaieikokosketus();}, 15);}
+}
+}
+}
+}
+
+function dfhj(){
+		purvar = 1121212;
+	var wwwwqqq = document.getElementById("k2");
+	wwwwqqq.remove();
+	pum();
+}
+var fti = null;
+var qled1 = 100;
+
+
+function ammu2varmuu(){
+	if(onkm2 > 0){
+		var div2 = document.createElement("DIV");   // Create a <button> element
+onkm2 = onkm2 - 1;
+var axc2 = true;
+var hh2 = true;
+div2.style.backgroundColor = "green";  
+div2.style.width ='25px'; 
+div2.style.height = "14px"; 
+var tekstik1ammukset2 = document.getElementById("k1ammu2").innerHTML = "Ammukset: " + onkm2;
+ div2.style.position = "absolute";
+div2.style.top ='250px';
+div2.style.left = '70px';
+console.log(onkm);
+document.body.appendChild(div2);
+var xk1v2 = kx22;
+xk1v2 = xk1v2 + 50;
+var leftari22 = 1240;
+console.log(xk1v2);
+ddsx2();
+function ddsx2(){
+	if(leftari22 < 20){
+		div2.remove();
+		axc2 = false;
+	}else{
+	setTimeout(function(){ddsx2();}, 30);}
+}
+ftopay2();
+function ftopay2(){
+		if(leftari22 < 190){
+onkovaieikokosketus2();
+
+}
+ div2.style.position = "absolute";
+div2.style.top = xk1v2 + 'px';
+div2.style.left = + leftari22 + 'px';
+leftari22 = leftari22 + -5;
+setTimeout(function(){ftopay2();}, 10);
+
+
+
+
+}
+function onkovaieikokosketus2(){
+
+if(hh2){
+	var tdn2 = xk1v2 - 50;
+	var kuvakakx2 = kx2 - 50;
+	var kuvakaky2 = kx2 + 50;
+
+	if(tdn2 < kuvakaky2){
+if(tdn2 > kuvakakx2){
+if(punasenelama2 < 2){
+	puashav();
+	div2.remove();
+}else{
+
+punasenelama2 = punasenelama2 - 1;
+
+document.getElementById("siniel").innerHTML = "Elämät: " + punasenelama2;
+hh2 = false;
+
+}
+	}
+}
+if(axc2){setTimeout(function(){onkovaieikokosketus2();}, 15);}
+}
+
+}
+}
+}
+
+var punasenelama2 = 20;
+
+function puashav(){
+	purvar = 1;
+	var wwwqqq = document.getElementById("k1");
+	wwwqqq.remove();
+	pum();
+}
+
+
+
+var onk2 = true;
+var onkm2 = 4;
+ain2();
+function ain2(){
+	if(onkm2 < 5){
+onkm2 = onkm2 + 1;
+var tekstik1ammukset2 = document.getElementById("k1ammu2").innerHTML = "Ammukset: " + onkm2;
+console.log(onkm2);
+}
+setTimeout(function(){ain2();}, 1000);
+
+}
+erf();
+	function erf(){
+		maa = 0;
+asx = 20;
+
+		//location.reload();
+	}
+	var kerra = 0;
+	var maa = 0;
+var asx = 40;
+
+	
+function pum(){
+
+
+if(maa < asx){
+	
+		console.log("W");
+	
+	var div = document.createElement("DIV");   // Create a <button> element
+
+div.style.backgroundColor = "red";  
+div.style.width ='10px'; 
+div.style.height = "10px"; 
+
+ div.style.position = "absolute";
+div.style.top ='250px';
+div.style.left = '700px';
+
+document.body.appendChild(div);
+if(purvar == 1){
+var x = qled1;
+var y = fti;
+}else{
+	var x = 1250;
+var y = kels;
+y = y + 40;
+}
+var xd = Math.floor(Math.random()* 100 + 1);
+var yd = Math.floor(Math.random()* 100 + 1);
+yd = yd / 10;
+xd = xd / 10;
+var t = Math.floor(Math.random()* 4 + 1);
+if(t == 1){
+	f();
+}
+if(t == 2){
+df();
+}
+if(t == 3){
+	bdf();
+}
+if(t == 4){
+	adf();
+}
+function f(){
+	if(y < 800){
+		if(x < 1480){
+ div.style.position = "absolute";
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y + yd;
+x = x + xd;
+setTimeout(function(){f();}, 20);
+}else{div.remove();}
+}else{div.remove();}
+}
+
+
+
+function df(){
+if(x < 1480){
+ div.style.position = "absolute";
+
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y - yd;
+x = x + xd;
+setTimeout(function(){df();}, 20);
+}else{div.remove();}
+}
+
+
+function adf(){
+if(y < 800){
+	if(x > 0){
+ div.style.position = "absolute";
+
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y + yd;
+x = x - xd;
+setTimeout(function(){adf();}, 20);
+}else{div.remove();}}else{div.remove();}
+}
+kerra = 1;
+
+function bdf(){
+	if(x > 0){
+ div.style.position = "absolute";
+div.style.top = y +'px';
+div.style.left = x + 'px';
+y = y - yd;
+x = x - xd;
+setTimeout(function(){bdf();}, 20);
+}else{div.remove();}
+}
+setTimeout(function(){pum();}, 0.03);
+
+
+
+maa = maa + 1;
+}
+}
+var kels = null;
+
+var purvar = null;
+</script>
+
+</body>
+</html>

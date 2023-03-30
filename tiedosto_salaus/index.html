@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+
+var konte = null;
+var nimi = null;
+function sdf(){
+konte = document.getElementById("sis").value;
+nimi = document.getElementById("siss").value;
+
+	setTimeout(function(){sdf();}, 30);}
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+	function downloadd(){
+// Start file download.
+download(nimi + ".pekka", konte);
+}
+
+function jj(){
+var file = document.getElementById("fileupload").files[0];
+if (file) {
+    var reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+    reader.onload = function (evt) {
+        document.getElementById("fileContents").innerHTML = evt.target.result;
+    }
+    reader.onerror = function (evt) {
+        document.getElementById("fileContents").innerHTML = "error reading file";
+    }
+}
+}
+setTimeout(function(){sdf();}, 80);
+
+ </script>
+ <h1>Tällä voit tehdä tiedoston, mitä et voi avata kuin tällä sivustolla</h1>
+  <h1>Tee tiedosto</h1>
+   <p>Kirjoita tähän tiedoston nimi</p>
+ <input id="siss">
+ <p>Kirjoita tähän tiedoston sisältö</p>
+ <input id="sis">
+
+<button onclick="downloadd();">Lataa kirjoittamasi tiedosto</button>
+
+
+<h1>Avaa tiedosto</h1>
+<input type="file" id="fileupload">
+
+<button onclick="jj();">Avaa liittämäsi tiedosto</button>
+<h1 id="fileContents"></h1>
+</body>
+</html>

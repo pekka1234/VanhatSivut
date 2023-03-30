@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pyramid</title>
+</head>
+<body style="background-color:#18def0">
+<script type="text/javascript">
+var one = 200;
+var two = 0;
+var tree = 552;
+var four = 0;
+var one2 = 139;
+var two2 = -4;
+var tree2 = 376;
+var four2 = 295;	
+p1(1);	
+function p1(num){
+	var cd = document.createElement("DIV");
+	var x = document.createElement("IMG");
+	var xx = 0;
+	var yy = 0;
+	if(num == 1){
+        xx = 200;
+        yy = 0;
+	}else if(num == 2){
+		xx = 552;
+		yy = 0;
+	}else if(num == 3){
+		xx = 139;
+		yy = -4;
+		x.style.transform = "rotate(180deg)";
+	}else if(num == 4){
+		xx = 376;
+		yy = 295;
+	}
+
+	x.src = "pyramidi.png";
+	x.style.width = "600px";
+	x.style.height = "300px";
+	x.id = "py"+num;
+	x.style.zIndex = "-10";
+	x.style.position = "absolute";
+	x.style.bottom = yy + "px";
+	x.style.left = xx + "px";
+    if(num==3)xx += 188;
+	cd.style.backgroundColor = "#18def0";
+	cd.style.width = "400px";
+	cd.style.height = "300px";
+	cd.style.position = "absolute";
+	cd.style.bottom = yy + "px";
+	cd.style.left = xx + "px";
+	cd.style.zIndex = "-9";
+	cd.id = "c";	
+    document.body.appendChild(cd);
+    document.body.appendChild(x);
+    var y = yy;
+    cdmove();
+    function cdmove(){
+    	cd = document.getElementById("c");
+    	cd.style.position = "absolute";
+    	cd.style.bottom = y + "px";
+    	y += 1;
+    	if(y < yy + 301){
+    	    setTimeout(function(){cdmove();},20)
+        }else{
+        	cd.remove();
+        	document.getElementById("py"+num).style.zIndex = "3000";
+        	if(num == 4){
+        		s()
+        	}
+        	else{
+                p1(num+1);
+        	}	
+        }
+    }
+}
+var ws = 600;
+var hs = 300;
+function s(){
+	if(ws > 600 / 4){
+	document.getElementById("py1").style.width = ws + "px";
+	document.getElementById("py1").style.height = hs + "px";
+	document.getElementById("py2").style.width = ws + "px";
+	document.getElementById("py2").style.height = hs + "px";
+	document.getElementById("py3").style.width = ws + "px";
+	document.getElementById("py3").style.height = hs + "px";
+	document.getElementById("py4").style.width = ws + "px";
+	document.getElementById("py4").style.height = hs + "px";
+
+	document.getElementById("py1").style.position = "absolute";
+
+	document.getElementById("py2").style.position = "absolute";
+
+	document.getElementById("py3").style.position = "absolute";
+
+	document.getElementById("py4").style.position = "absolute";
+
+	document.getElementById("py1").style.bottom = one + "px";
+	document.getElementById("py1").style.left = two + "px";
+	document.getElementById("py2").style.bottom = tree + "px";
+	document.getElementById("py2").style.left = four + "px";
+	document.getElementById("py3").style.bottom = one2 + "px";
+	document.getElementById("py3").style.left = two2 + "px";
+	document.getElementById("py4").style.bottom = tree2 + "px";
+	document.getElementById("py4").style.left = four2 + "px";
+	//ws -= 3;
+	//hs -= 3;
+	one -= 1;
+	two -= 1;
+	tree -= 1;
+	four -= 1;
+	one2 -= 1;
+	two2 -= 1;
+	tree2 -= 1;
+	four2 -= 1;
+	setTimeout(function(){s();},20);
+	}	
+}
+</script>	
+
+</body>
+</html>
