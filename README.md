@@ -1,7 +1,7 @@
 # VanhatSivut
 Muutamia sivuja joita tein kauan sitten
 
-##Parhaat: 
+## Parhaat: 
 
 alkuluku, laskee alkulukuja  
 
